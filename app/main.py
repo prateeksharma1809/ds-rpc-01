@@ -2,6 +2,8 @@ from typing import Dict
 
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from app.services.vector_store import search_documents
+from app.services.rag_engine import generate_response
 
 
 app = FastAPI()
@@ -14,7 +16,8 @@ users_db: Dict[str, Dict[str, str]] = {
     "Sam": {"password": "financepass", "role": "finance"},
     "Peter": {"password": "pete123", "role": "engineering"},
     "Sid": {"password": "sidpass123", "role": "marketing"},
-    "Natasha": {"passwoed": "hrpass123", "role": "hr"}
+    "Natasha": {"passwoed": "hrpass123", "role": "hr"},
+     "Elena": {"password": "execpass", "role": "c-level"},
 }
 
 
@@ -43,4 +46,18 @@ def test(user=Depends(authenticate)):
 # Protected chat endpoint
 @app.post("/chat")
 def query(user=Depends(authenticate), message: str = "Hello"):
-    return "Implement this endpoint."
+    role = user["role"]
+    docs = search_documents(message, role)
+    if not docs:
+        return {"response": "Sorry, no relevant documents were found."}
+    answer = generate_response(message, docs)
+    return {
+        "response": answer,
+        "source_titles": [doc["section_title"] for doc in docs],
+        "sources": [doc["source"] for doc in docs]
+    }
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)
