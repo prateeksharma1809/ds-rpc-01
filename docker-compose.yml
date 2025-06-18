@@ -1,17 +1,38 @@
 services:
   api:
     build: .
+    container_name: fastapi-app
     ports:
       - "8000:8000"
     depends_on:
       - qdrant
+      - postgres
     volumes:
       - .:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     environment:
       - QDRANT_HOST=qdrant
       - QDRANT_PORT=6333
+      - DATABASE_URL=postgresql://appuser:appsecret@postgres:5432/appdb
 
   qdrant:
     image: qdrant/qdrant
+    container_name: qdrant
     ports:
       - "6333:6333"
+
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: appuser
+      POSTGRES_PASSWORD: appsecret
+      POSTGRES_DB: appdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

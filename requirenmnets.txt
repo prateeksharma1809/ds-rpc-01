@@ -8,3 +8,5 @@ streamlit
 httpx
 openai
 markdown
+sqlalchemy
+psycopg2-binary

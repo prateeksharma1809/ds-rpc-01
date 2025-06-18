@@ -1,0 +1,680 @@
+# =============================================================================
+# GIT AND VERSION CONTROL
+# =============================================================================
+.git
+.gitignore
+.gitattributes
+
+# =============================================================================
+# PYTHON CACHE AND COMPILED FILES
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =============================================================================
+# VIRTUAL ENVIRONMENTS
+# =============================================================================
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# =============================================================================
+# IDE AND EDITOR FILES
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.iml
+*.ipr
+*.iws
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# =============================================================================
+# ENVIRONMENT VARIABLES AND SECRETS
+# =============================================================================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+
+# =============================================================================
+# LOGS AND TEMPORARY FILES
+# =============================================================================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.temp
+
+# =============================================================================
+# DATABASE FILES
+# =============================================================================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# =============================================================================
+# DOCUMENTATION
+# =============================================================================
+README.md
+*.md
+docs/
+/site
+
+# =============================================================================
+# TEST FILES AND DIRECTORIES
+# =============================================================================
+tests/
+test_*
+*_test.py
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# =============================================================================
+# DOCKER FILES
+# =============================================================================
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# =============================================================================
+# DEVELOPMENT AND BUILD TOOLS
+# =============================================================================
+.python-version
+pyproject.toml
+setup.py
+setup.cfg
+requirements-dev.txt
+requirements-test.txt
+Pipfile.lock
+poetry.lock
+
+# =============================================================================
+# OS GENERATED FILES
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Icon
+.fuse_hidden*
+.nfs*
+.directory
+.Trash-*
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+Thumbs.db:encryptable
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# =============================================================================
+# NODE.JS (IF ANY FRONTEND ASSETS)
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# =============================================================================
+# BACKUP AND ARCHIVE FILES
+# =============================================================================
+*.bak
+*.backup
+*.old
+*.orig
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.bz2
+*.xz
+*.lzma
+*.gz
+*.iso
+*.jar
+
+# =============================================================================
+# JUPYTER NOTEBOOK
+# =============================================================================
+.ipynb_checkpoints
+
+# =============================================================================
+# PYTHON DEVELOPMENT TOOLS
+# =============================================================================
+__pypackages__/
+celerybeat-schedule
+celerybeat.pid
+*.sage.py
+.spyderproject
+.spyproject
+.ropeproject
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+
+# =============================================================================
+# LOCAL DEVELOPMENT FILES
+# =============================================================================
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# =============================================================================
+# VECTOR STORE DATA
+# =============================================================================
+resources/vectorstore/
+*.qdrant
+
+# =============================================================================
+# LARGE DATA FILES
+# =============================================================================
+*.csv
+*.json
+*.xml
+
+# =============================================================================
+# MODEL FILES (IF CACHED LOCALLY)
+# =============================================================================
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.model
+*.bin
+
+# =============================================================================
+# CACHE DIRECTORIES
+# =============================================================================
+.cache/
+cache/
+
+# =============================================================================
+# BACKUP DIRECTORIES
+# =============================================================================
+backup/
+backups/
+
+# =============================================================================
+# LARGE BINARY FILES
+# =============================================================================
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# =============================================================================
+# MEDIA FILES
+# =============================================================================
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mp3
+*.wav
+*.flac
+*.aac
+*.ogg
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.svg
+*.ico
+
+# =============================================================================
+# FONT FILES
+# =============================================================================
+*.ttf
+*.otf
+*.woff
+*.woff2
+*.eot
+
+# =============================================================================
+# EXECUTABLE FILES
+# =============================================================================
+*.exe
+*.msi
+*.deb
+*.rpm
+*.dmg
+*.pkg
+
+# =============================================================================
+# SCRIPTS AND SHELL FILES
+# =============================================================================
+*.sh
+*.bat
+*.cmd
+*.ps1
+
+# =============================================================================
+# CONFIGURATION FILES THAT MIGHT CONTAIN SECRETS
+# =============================================================================
+config.ini
+settings.ini
+*.conf
+*.config
+
+# =============================================================================
+# LOCK FILES
+# =============================================================================
+*.lock
+
+# =============================================================================
+# BUILD ARTIFACTS
+# =============================================================================
+build/
+dist/
+target/
+
+# =============================================================================
+# COVERAGE REPORTS
+# =============================================================================
+.coverage
+coverage.xml
+htmlcov/
+
+# =============================================================================
+# PROFILING DATA
+# =============================================================================
+*.prof
+
+# =============================================================================
+# MEMORY DUMPS
+# =============================================================================
+*.dump
+*.dmp
+
+# =============================================================================
+# CORE DUMPS
+# =============================================================================
+core.*
+
+# =============================================================================
+# SYSTEM FILES
+# =============================================================================
+.fuse_hidden*
+.nfs*
+
+# =============================================================================
+# NETWORK FILES
+# =============================================================================
+.netrc
+
+# =============================================================================
+# SSH KEYS
+# =============================================================================
+.ssh/
+
+# =============================================================================
+# GPG KEYS
+# =============================================================================
+.gnupg/
+
+# =============================================================================
+# CERTIFICATES
+# =============================================================================
+*.pem
+*.crt
+*.key
+*.p12
+*.pfx
+
+# =============================================================================
+# DATABASE DUMPS
+# =============================================================================
+*.dump
+*.sql
+
+# =============================================================================
+# TEMPORARY FILES CREATED BY EDITORS
+# =============================================================================
+*~
+.#*
+\#*#
+.#*
+
+# =============================================================================
+# WINDOWS INSTALLER FILES
+# =============================================================================
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# =============================================================================
+# WINDOWS SHORTCUTS
+# =============================================================================
+*.lnk
+
+# =============================================================================
+# EMACS FILES
+# =============================================================================
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =============================================================================
+# PROJECT-SPECIFIC EXCLUSIONS
+# =============================================================================
+# Uncomment and modify these based on your specific needs
+
+# Development data (if you have large datasets for development)
+# dev_data/
+# test_data/
+
+# Local configuration files
+# local_config/
+# config/local/
+
+# Development certificates
+# certs/
+# certificates/
+
+# Local logs
+# logs/
+# *.log
+
+# Development databases
+# *.sqlite
+# *.db
+
+# Local cache
+# .cache/
+# cache/
+
+# Temporary uploads
+# uploads/
+# temp_uploads/
+
+# Development scripts
+# scripts/dev/
+# tools/
+
+# Documentation builds
+# docs/_build/
+# site/
+
+# Test reports
+# test_reports/
+# coverage_reports/
+
+# Performance profiling
+# profiles/
+# *.prof
+
+# Memory dumps
+# *.dump
+# *.dmp
+
+# Core dumps
+# core.*
+
+# Network configuration
+# .netrc
+
+# SSH configuration
+# .ssh/
+
+# GPG configuration
+# .gnupg/
+
+# Local certificates
+# *.pem
+# *.crt
+# *.key
+# *.p12
+# *.pfx
+
+# Archive files
+# *.7z
+# *.dmg
+# *.gz
+# *.iso
+# *.jar
+# *.rar
+# *.tar
+# *.zip
+
+# Compressed files
+# *.bz2
+# *.gz
+# *.xz
+# *.lzma
+
+# Database dumps
+# *.dump
+# *.sql
+
+# Backup files
+# *.bak
+# *.backup
+# *.old
+# *.orig
+
+# Temporary files created by editors
+# *~
+# .#*
+# \#*#
+# .#*
+
+# Files created by macOS
+# .AppleDouble
+# .LSOverride
+
+# Icon must end with two \r
+# Icon
+
+# Thumbnails
+# ._*
+
+# Files that might appear in the root of a volume
+# .DocumentRevisions-V100
+# .fseventsd
+# .Spotlight-V100
+# .TemporaryItems
+# .Trashes
+# .VolumeIcon.icns
+# .com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+# .AppleDB
+# .AppleDesktop
+# Network Trash Folder
+# Temporary Items
+# .apdisk
+
+# Windows thumbnail cache files
+# Thumbs.db
+# Thumbs.db:encryptable
+# ehthumbs.db
+# ehthumbs_vista.db
+
+# Dump file
+# *.stackdump
+
+# Folder config file
+# [Dd]esktop.ini
+
+# Recycle Bin used on file shares
+# $RECYCLE.BIN/
+
+# Windows Installer files
+# *.cab
+# *.msi
+# *.msix
+# *.msm
+# *.msp
+
+# Windows shortcuts
+# *.lnk
+
+# Linux
+# *~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+# .fuse_hidden*
+
+# KDE directory preferences
+# .directory
+
+# Linux trash folder which might appear on any partition or disk
+# .Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+# .nfs*
+
+# JetBrains IDEs
+# .idea/
+# *.iml
+# *.ipr
+# *.iws
+
+# Visual Studio Code
+# .vscode/
+# *.code-workspace
+
+# Sublime Text
+# *.sublime-project
+# *.sublime-workspace
+
+# Vim
+# *.swp
+# *.swo
+# *~
+
+# Emacs
+# *~
+# \#*\#
+# /.emacs.desktop
+# /.emacs.desktop.lock
+# *.elc
+# auto-save-list
+# tramp
+# .\#*
+
+# macOS
+# .DS_Store
+# .AppleDouble
+# .LSOverride
+
+# Icon must end with two \r
+# Icon
+
+# Thumbnails
+# ._*
+
+# Files that might appear in the root of a volume
+# .DocumentRevisions-V100
+# .fseventsd
+# .Spotlight-V100
+# .TemporaryItems
+# .Trashes
+# .VolumeIcon.icns
+# .com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+# .AppleDB
+# .AppleDesktop
+# Network Trash Folder
+# Temporary Items
+# .apdisk
+
+# Windows
+# Thumbs.db
+# Thumbs.db:encryptable
+# ehthumbs.db
+# ehthumbs_vista.db
+
+# Dump file
+# *.stackdump
+
+# Folder config file
+# [Dd]esktop.ini
+
+# Recycle Bin used on file shares
+# $RECYCLE.BIN/
+
+# Windows Installer files
+# *.cab
+# *.msi
+# *.msix
+# *.msm
+# *.msp
+
+# Windows shortcuts
+# *.lnk 
