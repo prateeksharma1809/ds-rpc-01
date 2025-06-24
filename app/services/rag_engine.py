@@ -146,7 +146,7 @@ def generate_response(
     use_enhanced_prompt: bool = True,
     temperature: float = 0.2,
     max_tokens: Optional[int] = None,
-    max_chunks: int = 3  # Limit to 3 chunks by default
+    max_chunks: int = 1  # Default
 ) -> str:
     """
     Generate a response using the RAG engine with enhanced capabilities.
@@ -163,6 +163,10 @@ def generate_response(
     if not docs:
         return "I don't have enough information to answer your question. Please try rephrasing or ask about a different topic."
     
+    has_csv_data = any(doc.get("row_data") for doc in docs)
+    if has_csv_data:
+        max_chunks = max(max_chunks, 5)  # Use at least 5 chunks if CSV data is present
+
     # Limit the number of chunks to avoid exceeding token limits
     docs = docs[:max_chunks]
 
@@ -171,6 +175,7 @@ def generate_response(
         prompt = build_role_aware_prompt(query, docs, user_role)
     else:
         prompt = build_simple_prompt(query, docs)
+    print(prompt)
     
     # Prepare API call parameters
     api_params = {

@@ -218,14 +218,3 @@ def load_document(file_path: str, **kwargs) -> List[Dict[str, Any]]:
         return load_csv(str(file_path), **kwargs)
     else:
         raise ValueError(f"Unsupported file type: {file_path.suffix}")
-
-
-# Backward compatibility functions
-def load_markdown_legacy(file_path: str, min_words: int = 30, max_paragraphs: int = 3) -> List[Dict[str, Any]]:
-    """Legacy function for backward compatibility."""
-    return load_markdown(file_path, max_chunk_size=min_words * 20, overlap=50)
-
-
-def load_csv_legacy(file_path: str) -> List[Dict[str, Any]]:
-    """Legacy function for backward compatibility."""
-    return load_csv(file_path)
